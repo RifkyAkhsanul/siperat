@@ -83,7 +83,7 @@ const Login = () => {
         <header className="relative z-10 flex flex-col content-center justify-center flex-grow h-full min-h-screen p-16 space-x-0 md:space-x-16 md:flex-row md:justify-center">
           <div className="flex flex-col content-center justify-center">
             <img
-              src="https://res.cloudinary.com/kuhakuni/image/upload/v1676036150/tgb6ngq5vatjp1lwiqqi.png"
+              src="https://res.cloudinary.com/dnyrrcacd/image/upload/v1707911498/OPREC%202024/LogoNoText_ei3ill.png"
               className="hidden md:block self-center w-48 md:ml-6"
             />
           </div>

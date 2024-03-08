@@ -4,7 +4,11 @@ const Footer = () => {
   return (
     <footer className="relative flex flex-col content-center justify-center flex-grow overflow-y-hidden bg-rose-100 pattern-leafy py-16 px-12 border-t-8 border-rose-200">
       <div className="flex justify-center items-center gap-x-10 p-10">
-        <img src="https://res.cloudinary.com/kuhakuni/image/upload/v1676036150/tgb6ngq5vatjp1lwiqqi.png" alt="LOGO BEM" className="sm:max-h-40 max-h-32" />
+        <img
+          src="https://res.cloudinary.com/dnyrrcacd/image/upload/v1707911498/OPREC%202024/LogoNoText_ei3ill.png"
+          alt="LOGO BEM"
+          className="sm:max-h-40 max-h-32"
+        />
         <div className="flex content-center flex-col justify-center gap-x-5">
           <SiperatLogo className="self-center sm:max-h-28 max-h-20" />
           <div className="self-center text-center md:text-left text-shadow-md">
