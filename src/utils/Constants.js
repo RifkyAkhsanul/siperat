@@ -19,6 +19,7 @@ export const Constants = {
     { kode: 'SB', nama: 'Surat Balasan' },
     { kode: 'Ket', nama: 'Surat Keputusan' },
     { kode: 'Ket', nama: 'Surat Aktif Organisasi' },
+    { kode: 'Ket', nama: 'Sertifikat' },
   ],
 
   // Urutan array (kementerian[x]) sesuai id yang ada di DB SIPERAT. SAMAKAN!
