@@ -19,6 +19,7 @@ const NewNomorSurat = () => {
   const [perihal, setPerihal] = useState('');
   const [berkas, setBerkas] = useState('');
   const [jumlah, setJumlah] = useState('1');
+  const [mintaTTD, setmintaTTD] = useState(false);
 
   // Form-related states
   const [loading, setLoading] = useState(false);
@@ -45,6 +46,7 @@ const NewNomorSurat = () => {
         jenis_surat_id: Number(jenis),
         kementerian_id: Number(kementerian),
         tujuan_surat_id: Number(tujuan),
+        minta_ttd: mintaTTD,
       })
       .then((reply) => {
         if (reply.data.success) {
@@ -90,7 +92,7 @@ const NewNomorSurat = () => {
       setValid(true);
       setMessage('✅ Jangan lupa periksa kembali isian form.');
     }
-  }, [kontak, berkas, perihal, penerima, proker, jumlah, jenis, kementerian, tujuan]);
+  }, [kontak, berkas, perihal, penerima, proker, jumlah, jenis, kementerian, tujuan, mintaTTD]);
 
   useEffect(() => {
     if (isSuratAktif()) {
@@ -260,6 +262,10 @@ const NewNomorSurat = () => {
         </label>
 
         {/*Submit section*/}
+        <div className="flex justify-start">
+          <label className="block text-gray-500 text-sm mb-2 pr-2 pt-2">* Ajukan permintaan tanda tangan</label>
+          <input type="checkbox" id="mintaTTD" name="testing" checked={mintaTTD} className="pt-2 w-4" onChange={(e) => setmintaTTD(e.target.checked)}></input>
+        </div>
         <div className="flex flex-col space-y-4 md:space-y-0 pt-4 md:pt-6 md:flex-row items-center justify-between">
           <span className="text-sm text-gray-700 font-normal">{message}</span>
           <Button disabled={!valid || loading} submit text="Submit" />
