@@ -180,8 +180,6 @@ const NewNomorSurat = () => {
           </select>
         </div>
 
-        <label className="block text-gray-500 text-sm mb-2">*Untuk sertifikat, menggunakan jenis Surat Keterangan (Ket)</label>
-
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
           <div className="w-full md:w-1/2">
             <label className="block font-semibold text-rose-900 text-md mb-2">Tujuan Surat*</label>
