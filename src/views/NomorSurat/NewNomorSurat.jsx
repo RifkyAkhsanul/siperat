@@ -261,9 +261,12 @@ const NewNomorSurat = () => {
 
         {/*Submit section*/}
         <div className="flex justify-start">
-          <label className="block text-gray-500 text-sm mb-2 pr-2 pt-2">* Ajukan permintaan tanda tangan</label>
+          <label className="block font-semibold text-rose-900 text-md mb-2 pr-2 pt-2">Ajukan permintaan tanda tangan</label>
           <input type="checkbox" id="mintaTTD" name="testing" checked={mintaTTD} className="pt-2 w-4" onChange={(e) => setmintaTTD(e.target.checked)}></input>
         </div>
+        <label className="block text-gray-500 text-sm mb-2">
+          * Cek jika ingin sekaligus mengajukan tanda tangan
+        </label>
         <div className="flex flex-col space-y-4 md:space-y-0 pt-4 md:pt-6 md:flex-row items-center justify-between">
           <span className="text-sm text-gray-700 font-normal">{message}</span>
           <Button disabled={!valid || loading} submit text="Submit" />
@@ -295,7 +298,7 @@ const NewNomorSurat = () => {
         <label className="block font-semibold text-rose-900 text-md mb-2">*Permission folder/file drive</label>
         <img
           className="self-center flex rounded-md border-2 border-rose-200"
-          src={`${import.meta.env.BASE_URL}assets/images/driveaccess.png`}
+          src={`${import.meta.env.BASE_URL}assets/images/editdrive.png`}
           alt="Permission file/folder Surat"
         />
       </div>
