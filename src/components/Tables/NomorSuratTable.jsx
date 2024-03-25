@@ -18,6 +18,7 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
     setStatus(item.status_surat.id);
     setKomentar(item.komentar);
     setProker(item.program_kerja);
+    console.log(item.minta_ttd);
     setCurrentSurat(item);
   };
 
@@ -143,6 +144,7 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
               <th className="sticky top-0 bg-gray-200 z-20 py-3 px-6">Jenis Surat</th>
               <th className="sticky top-0 bg-gray-200 z-20 py-3 px-6">Perihal</th>
               <th className="sticky top-0 bg-gray-200 z-20 py-3 px-6">Komentar</th>
+              <th className="sticky top-0 bg-gray-200 z-20 py-3 px-6">Minta Tanda Tangan</th>
             </tr>
           </thead>
 
@@ -256,6 +258,8 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                     {item.komentar}
                   </div>
                 </td>
+                {/*Perihal*/}
+                <td className="py-3 px-6 text-left whitespace-nowrap leading-loose">{item.minta_ttd ? 'Ya' : 'Tidak'}</td>
               </tr>
             ))}
           </tbody>
@@ -500,6 +504,10 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                 <div>
                   <div className="font-bold text-md mb-2">Perihal</div>
                   {currentSurat.perihal}
+                </div>
+                <div>
+                  <div className="font-bold text-md mb-2">Minta Tanda Tangan</div>
+                  {currentSurat.minta_ttd ? 'Ya' : 'Tidak'}
                 </div>
 
                 <hr />
