@@ -42,6 +42,8 @@ export const Constants = {
     { kode: 2, nama: 'Revisi', color: 'bg-yellow-200 text-yellow-700' },
     { kode: 3, nama: 'Ditolak', color: 'bg-red-200 text-red-700' },
     { kode: 4, nama: 'Diterima', color: 'bg-green-200 text-green-700' },
+    { kode: 5, nama: 'Diterima (Proses TTD)', color: 'bg-green-200 text-green-700' },
+    { kode: 6, nama: 'Diterima (Sudah TTD)', color: 'bg-green-200 text-green-700' },
   ],
 
   tujuan_surat: [
@@ -52,6 +54,7 @@ export const Constants = {
     status: [
       { kode: 1, nama: 'Pertama Kali submit', color: 'bg-blue-200 text-blue-700' },
       { kode: 2, nama: 'TTD', color: 'bg-green-200 text-green-700' },
+      { kode: 3, nama: 'Ditolak', color: 'bg-red-200 text-red-700' },
     ],
     jenis_berkas: [
       {
@@ -69,6 +72,6 @@ export const Constants = {
     return this.status_surat[kode - 1].color;
   },
   getColorTTD: (id) => {
-    return id === 1 ? 'bg-blue-200 text-blue-700' : 'bg-green-200 text-green-700';
+    return id === 1 ? 'bg-blue-200 text-blue-700' : (id === 2 ? 'bg-green-200 text-green-700' : 'bg-red-200 text-red-700');
   },
 };

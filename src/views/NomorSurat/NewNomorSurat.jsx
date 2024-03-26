@@ -225,7 +225,7 @@ const NewNomorSurat = () => {
         />
 
         <Input
-          label="Link Folder/Berkas* (wajib: set access Commenter untuk email UB!)"
+          label="Link Folder/Berkas* (wajib: set access Editor untuk email UB!)"
           name="berkas"
           type="text"
           required

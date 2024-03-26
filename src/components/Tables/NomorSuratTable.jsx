@@ -512,23 +512,39 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
 
                 <hr />
 
-                <div>
+                {currentSurat.minta_ttd === false && <div>
                   <div className="font-bold text-md mb-2">Ubah Status</div>
                   <div className="relative shadow border rounded-md w-full pl-3 pr-4 bg-white focus:shadow-lg" onChange={() => false}>
                     <select
-                      disabled={currentSurat.status_surat.id === 4}
+                      disabled={currentSurat.status_surat.id === 4 && !currentSurat.minta_ttd}
                       className="py-3 w-full focus:outline-none focus:ring-0 disabled:opacity-50"
                       value={status}
                       onChange={(e) => setStatus(e.target.value)}
                     >
                       {Constants.status_surat.map((item, idx) => (
-                        <option key={idx + 1} value={idx + 1}>
+                        idx < 4 ? <option key={idx + 1} value={idx + 1}>
                           {item.nama}
-                        </option>
+                        </option> : null
                       ))}
                     </select>
                   </div>
-                </div>
+                </div>}
+
+                {currentSurat.minta_ttd === true && <div>
+                  <div className="font-bold text-md mb-2">Ubah Status</div>
+                  <div className="relative shadow border rounded-md w-full pl-3 pr-4 bg-white focus:shadow-lg" onChange={() => false}>
+                    <select
+                      disabled={currentSurat.status_surat.id === 6}
+                      className="py-3 w-full focus:outline-none focus:ring-0 disabled:opacity-50"
+                      value={status}
+                      onChange={(e) => setStatus(e.target.value)}
+                    >
+                      {Constants.status_surat.map((item, idx) => (
+                        currentSurat.status_surat.id === 5 ?  (idx > 4 ? <option key={idx + 1} value={idx + 1}> {item.nama} </option> : null) : ((idx !== 3 && idx !== 5) ? <option key={idx + 1} value={idx + 1}> {item.nama} </option> : null)
+                      ))}
+                    </select>
+                  </div>
+                </div>}
 
                 {/*<div>*/}
                 {/*  <div className="font-bold text-md mb-2">Ubah Nama Proker</div>*/}
@@ -548,7 +564,7 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                     className="shadow appearance-none border rounded-md w-full h-24 px-4 py-3 focus:outline-none focus:shadow-lg disabled:opacity-50"
                     name="komentar"
                     placeholder="Komentar..."
-                    disabled={currentSurat.status_surat.id === 4}
+                    disabled={currentSurat.status_surat.id === 4 || currentSurat.status_surat.id === 5 || currentSurat.status_surat.id === 6}
                     value={komentar}
                     onChange={(e) => setKomentar(e.target.value)}
                   />
@@ -559,8 +575,8 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                     {loading ? 'Loading...' : 'Nomor akan otomatis ter-assign ketika surat diubah menjadi diterima'}
                   </span>
                   <Button
-                    disabled={loading || currentSurat.status_surat.id === 4}
-                    text="Ubah status"
+                    disabled={loading || (currentSurat.status_surat.id === 4 && currentSurat.minta_ttd == false) || currentSurat.status_surat.id === 6}
+                    text={currentSurat.status_surat.id === 5 ? "Surat di TTD" : "Ubah status"}
                     onClick={() =>
                       handleChangeStatus(currentSurat.id, {
                         status_surat_id: Number(status),
