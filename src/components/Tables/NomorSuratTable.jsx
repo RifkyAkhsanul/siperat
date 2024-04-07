@@ -529,7 +529,7 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                     </select>
                   </div>
                 </div>}
-
+                
                 {currentSurat.minta_ttd === true && <div>
                   <div className="font-bold text-md mb-2">Ubah Status</div>
                   <div className="relative shadow border rounded-md w-full pl-3 pr-4 bg-white focus:shadow-lg" onChange={() => false}>
@@ -542,6 +542,7 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                       {Constants.status_surat.map((item, idx) => (
                         currentSurat.status_surat.id === 5 ?  (idx > 4 ? <option key={idx + 1} value={idx + 1}> {item.nama} </option> : null) : ((idx !== 3 && idx !== 5) ? <option key={idx + 1} value={idx + 1}> {item.nama} </option> : null)
                       ))}
+                    
                     </select>
                   </div>
                 </div>}
@@ -579,7 +580,7 @@ export const NomorSuratTable = ({ data, isAdmin = false }) => {
                     text={currentSurat.status_surat.id === 5 ? "Surat di TTD" : "Ubah status"}
                     onClick={() =>
                       handleChangeStatus(currentSurat.id, {
-                        status_surat_id: Number(status),
+                        status_surat_id: Number(currentSurat.status_surat.id === 5 ? 6 : status),
                         komentar: komentar,
                       })
                     }

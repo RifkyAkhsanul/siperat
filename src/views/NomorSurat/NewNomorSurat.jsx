@@ -96,7 +96,7 @@ const NewNomorSurat = () => {
 
   useEffect(() => {
     if (isSuratAktif()) {
-      setKementerian('11');
+      setKementerian('10');
       setProker('-');
       setPerihal('Surat Aktif Organisasi');
     }
