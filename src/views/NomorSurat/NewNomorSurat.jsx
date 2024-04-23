@@ -72,7 +72,7 @@ const NewNomorSurat = () => {
       pass = false;
     }
     // Check proker string
-    if (proker.length > 20 || proker.trim().split(' ').length > 2 || !proker) {
+    if (proker.length > 25 || proker.trim().split(' ').length > 2 || !proker) {
       pass = false;
     }
     // Check other string fields
@@ -157,7 +157,7 @@ const NewNomorSurat = () => {
           </div>
         </div>
 
-        <label className="block text-gray-500 text-sm mb-2">*Nama proker max 20 karakter DAN max 2 kata (1 kali spasi). Penjelasan lihat di bawah form</label>
+        <label className="block text-gray-500 text-sm mb-2">*Nama proker max 25 karakter DAN max 2 kata (1 kali spasi). Penjelasan lihat di bawah form</label>
         <label className="block text-gray-500 text-sm mb-2">
           *Jika mengajukan sertifikat atau surat keterangan aktif kepanitiaan/organisasi, isi proker dengan {'"-"'}
         </label>
