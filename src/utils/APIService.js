@@ -5,7 +5,7 @@ const SUPABASE_KEY =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYyNzk1NTk0OCwiZXhwIjoxOTQzNTMxOTQ4fQ.c5rC9NY-KoVY1QYFha9d6nMapi4PJH6p3Pfyj3_uPjY';
 
 const TTD_ENDPOINT = 'https://tmflkpbzllxuxukayata.supabase.co/rest/v1/permintaan_ttd';
-const SIPERAT_ENDPOINT = 'https://siperat-33o7oo4n.b4a.run/';
+const SIPERAT_ENDPOINT = 'http://103.56.148.129:8081';
 
 // Send get request and returns a Promise from Axios
 const sendGet = async (url, params = {}) => {

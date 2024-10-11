@@ -6,6 +6,7 @@ import { APIService } from '../../utils/APIService';
 import Swal from 'sweetalert2/dist/sweetalert2.all.min';
 
 export const NomorSuratTable = ({ data, isAdmin = false }) => {
+  console.log(data);
   if (data == null) return null;
 
   const [loading, setLoading] = useState(false);

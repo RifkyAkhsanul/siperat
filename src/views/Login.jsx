@@ -45,7 +45,7 @@ const Login = () => {
           setUserData(reply.data, reply.token);
           axios({
             method: 'GET',
-            url: 'https://siperat-33o7oo4n.b4a.run/is_admin',
+            url: 'http://103.56.148.129:8081/is_admin',
             headers: {
               Authorization: `Bearer ${getToken}`,
             },
