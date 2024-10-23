@@ -45,7 +45,7 @@ const Login = () => {
           setUserData(reply.data, reply.token);
           axios({
             method: 'GET',
-            url: 'http://103.56.148.129:8081/is_admin',
+            url: 'https://bemfilkom.ddns.net/is_admin',
             headers: {
               Authorization: `Bearer ${getToken}`,
             },
