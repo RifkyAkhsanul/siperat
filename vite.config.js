@@ -3,7 +3,7 @@ import reactJsx from 'vite-react-jsx';
 import obfuscator from 'rollup-plugin-obfuscator';
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/apps/siperat/' : '/',
+  base: mode === 'production' ? '/' : '/',
   build: {
     outDir: 'build',
   },
