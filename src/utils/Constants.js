@@ -24,17 +24,18 @@ export const Constants = {
 
   // Urutan array (kementerian[x]) sesuai id yang ada di DB SIPERAT. SAMAKAN!
   kementerian: [
-    { kode: 'PSDM', nama: 'Pengembangan Sumber Daya Manusia' },
-    { kode: 'KMB', nama: 'Karir, Minat, dan Bakat' },
-    { kode: 'EKRAF', nama: 'Ekonomi Kreatif' },
-    { kode: 'SOSLING', nama: 'Sosial dan Lingkungan' },
-    { kode: 'KASTRAT', nama: 'Kajian dan Aksi Strategis' },
-    { kode: 'ADVO', nama: 'Advokasi dan Kesejahteraan Mahasiswa' },
-    { kode: 'ADKEU', nama: 'Administrasi dan Keuangan' },
-    { kode: 'MEDINKRAF', nama: 'Media Informasi dan Kreatif' },
-    { kode: 'PIT', nama: 'Pengembangan Informasi dan Teknologi' },
-    { kode: 'PRES', nama: 'Presiden' },
-    { kode: 'PSDI', nama: 'Pengembangan Sumber Daya Internal' },
+    { kode: 'HC', nama: 'Human Capital Ministry' },
+    { kode: 'TG', nama: 'Talent Growth Ministry' },
+    { kode: 'CE', nama: 'Creative Enterprise Ministry' },
+    { kode: 'SEE', nama: 'Social Equity and Environment Ministry' },
+    { kode: 'SSA', nama: 'Studies and Strategic Action Ministry' },
+    { kode: 'SAW', nama: 'Student Advocacy and Welfare Ministry' },
+    { kode: 'AF', nama: 'Administration and Finance Bureau' },
+    { kode: 'CMI', nama: 'Creative Media and Information Bureau' },
+    { kode: 'ITS', nama: 'IT Solutions Bureau' },
+    { kode: 'PRES', nama: 'President' },
+    { kode: 'IRE', nama: 'Internal Resource Empowerment' },
+    { kode: 'IAA', nama: 'Inter-Agency Affairs Ministry' },
   ],
 
   status_surat: [

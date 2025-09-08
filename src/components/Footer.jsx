@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="relative flex flex-col content-center justify-center flex-grow overflow-y-hidden bg-rose-100 pattern-leafy py-16 px-12 border-t-8 border-rose-200">
       <div className="flex justify-center items-center gap-x-10 p-10">
         <img
-          src="https://res.cloudinary.com/dnyrrcacd/image/upload/v1707911498/OPREC%202024/LogoNoText_ei3ill.png"
+          src="https://res.cloudinary.com/dnnznx7sj/image/upload/v1740212733/z5tnomvwavnizskthitk.svg"
           alt="LOGO BEM"
           className="sm:max-h-40 max-h-32"
         />

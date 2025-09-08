@@ -27,7 +27,7 @@ const Login = () => {
 
     setMessage('⏳ Authenticating...');
 
-    fetch('https://bemfilkom-rest.vercel.app/auth', {
+    fetch('https://bemfilkom.ddns.net:8443/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const Login = () => {
         return reply.json();
       })
       .then((reply) => {
-        if (reply.success) {
+        if (reply.message == "successfully logged in") {
           setUserData(reply.data, reply.token);
           axios({
             method: 'GET',
@@ -83,7 +83,7 @@ const Login = () => {
         <header className="relative z-10 flex flex-col content-center justify-center flex-grow h-full min-h-screen p-16 space-x-0 md:space-x-16 md:flex-row md:justify-center">
           <div className="flex flex-col content-center justify-center">
             <img
-              src="https://res.cloudinary.com/dnyrrcacd/image/upload/v1707911498/OPREC%202024/LogoNoText_ei3ill.png"
+              src="https://res.cloudinary.com/dnnznx7sj/image/upload/v1740212733/z5tnomvwavnizskthitk.svg"
               className="hidden md:block self-center w-48 md:ml-6"
             />
           </div>
